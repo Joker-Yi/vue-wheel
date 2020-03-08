@@ -17,7 +17,10 @@ export default {
 	  icon: {},
     iconPosition: {
 	    type: String,
-			default: 'left'
+			default: 'left',
+			validator(value) {
+        return value === 'left' || value === 'right';
+      }
 		}
 	}
 }
@@ -37,6 +40,7 @@ export default {
 		vertical-align: middle;
 		&:hover {
 			border-color: var(--border-color-hover);
+			cursor: pointer;
 		}
 		&:active {
 			background-color: var(--button-active-bg);
