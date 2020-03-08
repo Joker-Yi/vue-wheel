@@ -22,8 +22,10 @@ export default {
 		display: inline-flex;
 		vertical-align: middle;
 		> .vw-button {
-			margin-left: -1px;
 			border-radius: 0;
+			&:not(:first-child) {
+				margin-left: -1px;
+			}
 			&:first-child {
 				border-top-left-radius: var(--border-radius);
 				border-bottom-left-radius: var(--border-radius);
