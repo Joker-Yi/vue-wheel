@@ -1,6 +1,7 @@
 <template>
 	<button class="vw-button" :class="{[`icon-${iconPosition}`]:true}">
 		<vw-icon class="icon" v-if="icon" :name="icon"></vw-icon>
+		<vw-icon class="loading" name="loading"></vw-icon>
 		<div class="content">
 			<slot></slot>
 		</div>
@@ -24,6 +25,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+	@keyframes spin {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(360deg);}
+	}
 	.vw-button {
 		font-size: var(--font-size);
 		height: var(--button-height);
@@ -68,5 +73,8 @@ export default {
 	.icon {
 		width: 1em;
 		height: 1em;
+	}
+	.loading {
+		animation: spin 1.5s infinite linear;
 	}
 </style>
