@@ -1,7 +1,9 @@
 <template>
-	<button class="vw-button" :class="{[`icon-${iconPosition}`]:true}">
-		<vw-icon class="icon" v-if="icon" :name="icon"></vw-icon>
-		<vw-icon class="loading" name="loading"></vw-icon>
+	<button class="vw-button"
+					:class="{[`icon-${iconPosition}`]:true}"
+					@click="$emit('click')">
+		<vw-icon class="icon" v-if="icon && !loading" :name="icon"></vw-icon>
+		<vw-icon class="loading icon" v-if="loading" name="loading"></vw-icon>
 		<div class="content">
 			<slot></slot>
 		</div>
@@ -19,7 +21,14 @@ export default {
 			validator(value) {
         return value === 'left' || value === 'right';
       }
+		},
+		loading: {
+	    type: Boolean,
+			default: false
 		}
+	},
+	methods: {
+
 	}
 }
 </script>

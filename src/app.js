@@ -10,7 +10,12 @@ Vue.component('vw-button',Button)
 Vue.component('vw-icon',Icon)
 
 new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    loading1: false,
+    loading2: true,
+    loading3: false
+  }
 })
 
 

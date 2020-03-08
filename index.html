@@ -54,11 +54,10 @@
 </head>
 <body>
 <div id="app">
-	<vw-button>按钮</vw-button>
-	<vw-button icon="good">下</vw-button>
-	<vw-button icon="shezhi" icon-position="right">左</vw-button>
+	<vw-button :loading="loading1" @click="loading1=!loading1">按钮</vw-button>
+	<vw-button icon="good" :loading="loading2" @click="loading2=!loading2">按钮</vw-button>
+	<vw-button icon="shezhi" :loading="loading3" icon-position="right" @click="loading3=!loading3">按钮</vw-button>
 	<vw-icon name="xia"></vw-icon>
-	<vw-icon name="loading"></vw-icon>
 </div>
 
 <script src='./src/app.js'></script>
