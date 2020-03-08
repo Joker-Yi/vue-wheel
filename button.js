@@ -3,7 +3,7 @@
  */
 Vue.component('vw-button',{
   template: `
-    <button class="vw-button">Hello</button>  
+    <button class="vw-button">按钮</button>  
   `
 })
 
