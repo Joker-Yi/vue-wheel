@@ -1,0 +1,23 @@
+{
+  "name": "vue-wheel",
+  "version": "0.0.1",
+  "description": "一个适用vue的ui组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joker-Yi/vue-wheel.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "Yee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Joker-Yi/vue-wheel/issues"
+  },
+  "homepage": "https://github.com/Joker-Yi/vue-wheel#readme"
+}
