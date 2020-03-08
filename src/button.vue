@@ -1,6 +1,6 @@
 <template>
 	<button class="vw-button" :class="{[`icon-${iconPosition}`]:true}">
-		<vw-icon v-if="icon" :name="icon"></vw-icon>
+		<vw-icon class="icon" v-if="icon" :name="icon"></vw-icon>
 		<div class="content">
 			<slot></slot>
 		</div>
@@ -10,7 +10,6 @@
 <script>
 export default {
 	name: '',
-	// props: ['icon','iconPosition']
 	props: {
 	  icon: {},
     iconPosition: {
