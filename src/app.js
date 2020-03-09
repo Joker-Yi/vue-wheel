@@ -20,10 +20,67 @@ new Vue({
   }
 })
 
-
-
-
-
+import chai from 'chai'
+const expect = chai.expect
+//单元测试
+{
+  const Constructor = Vue.extend(Button)
+  const button = new Constructor({
+    propsData: {
+      icon: 'shezhi'
+    }
+  })
+  button.$mount('#test')
+  let href = button.$el.querySelector('use')
+  // 测试 引入图标
+  expect(href.getAttribute('xlink:href')).to.eq('#i-shezhi') // 单元测试没在控制台报错代表测试用例通过   判断 主观输入  是否 = 实际输出
+}
+{
+  const Constructor = Vue.extend(Button)
+  const button = new Constructor({
+    propsData: {
+      icon: 'shezhi',
+      loading: true
+    }
+  })
+  button.$mount() // 挂载到内存中也是一样可以看控制台信息
+  let href = button.$el.querySelector('use')
+  // 测试为加载中状态 图标是否为loading
+  expect(href.getAttribute('xlink:href')).to.eq('#i-loading')
+}
+{
+  const div = document.createElement('dev')
+  document.body.append(div)
+  const Constructor = Vue.extend(Button)
+  const button = new Constructor({
+    propsData: {
+      icon: 'shezhi',
+      iconPosition: 'right'
+    }
+  })
+  button.$mount(div)
+  let svg = button.$el.querySelector('svg')
+  let {order} = window.getComputedStyle(svg) // 注意该组件应该渲染到页面上,才会有style样式
+  // 测试图标位置是否为 right
+  expect(order).to.eq('2')
+}
+{
+  //mock
+  const Constructor = Vue.extend(Button)
+  const vm = new Constructor({
+    propsData: {
+      icon: 'shezhi',
+      iconPosition: 'right'
+    }
+  })
+  vm.$mount()
+  vm.$on('click', () => {
+    expect(1).to.eq(1)
+  })
+  // 希望这个函数被执行
+  let button = vm.$el
+  button.click()
+}
 
 
 
