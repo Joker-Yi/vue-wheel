@@ -11,8 +11,12 @@
 </template>
 
 <script>
+  import Icon from "./icon";
 export default {
 	name: '',
+  components: {
+    'vw-icon': Icon
+  },
 	props: {
 	  icon: {},
     iconPosition: {

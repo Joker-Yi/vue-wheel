@@ -27,6 +27,7 @@ import spies from 'chai-spies'
 chai.use(spies)
 //单元测试
 {
+  // 测试是否传入 icon
   const Constructor = Vue.extend(Button)
   const button = new Constructor({
     propsData: {
@@ -34,6 +35,7 @@ chai.use(spies)
     }
   })
   button.$mount('#test')
+  console.log(button.$el);
   let href = button.$el.querySelector('use')
   // 测试 引入图标
   expect(href.getAttribute('xlink:href')).to.eq('#i-shezhi') // 单元测试没在控制台报错代表测试用例通过   判断 主观输入  是否 = 实际输出
