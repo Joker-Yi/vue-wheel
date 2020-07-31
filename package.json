@@ -1,8 +1,8 @@
 {
-  "name": "vue-wheel",
-  "version": "0.0.1",
+  "name": "yee-wheel-ui",
+  "version": "0.0.2",
   "description": "一个适用vue的ui组件库",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html",
