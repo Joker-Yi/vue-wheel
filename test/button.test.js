@@ -8,6 +8,12 @@ import Button from '../src/button'
 Vue.config.productionTip = false
 Vue.config.devtools = false
 
+// 测试用例 每个it就是一个测试用例
+// BDD 行为测试驱动 Mocha
+//eg： describe '人类'
+//  it has head
+//  it has hand
+// 万能语句: expect(xxx).to.eq(yyy)
 describe('Button', () => {
 
   it('存在.', () => {
@@ -50,7 +56,7 @@ describe('Button', () => {
       }
     }).$mount(div)
     const icon = vm.$el.querySelector('svg')
-    expect(getComputedStyle(icon).order).to.eq('1')
+    expect(getComputedStyle(icon).order).to.eq('1')  // 希望 获取计算后的属性order = '1'
     vm.$el.remove()
     vm.$destroy()
   })
@@ -78,7 +84,7 @@ describe('Button', () => {
       }
     }).$mount()
 
-    const callback = sinon.fake();
+    const callback = sinon.fake(); //sinon.fake() 用来 标记该方法（函数）被调用，它知道自己是否被调用了
     vm.$on('click', callback)
     vm.$el.click()
     expect(callback).to.have.been.called

@@ -1,6 +1,7 @@
 /**
  * Created by Yee .
  */
+// karma 测试运行器
 module.exports = function (config) {
   config.set({
 

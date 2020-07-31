@@ -54,7 +54,7 @@ chai.use(spies)
   expect(href.getAttribute('xlink:href')).to.eq('#i-loading')
 }
 {
-  const div = document.createElement('dev')
+  const div = document.createElement('div')
   document.body.append(div)
   const Constructor = Vue.extend(Button)
   const button = new Constructor({
@@ -83,7 +83,7 @@ chai.use(spies)
   })
   vm.$on('click', spy)
   // 希望这个函数被执行
-  let button = vm.$el
+  let button = vm.$el  // 获取该元素对象
   button.click()
   expect(spy).to.have.been.called() // 希望 spy 间谍函数 已经被调用了
 }
