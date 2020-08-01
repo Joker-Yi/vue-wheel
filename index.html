@@ -66,8 +66,10 @@
   <div style="margin: 10px  0;">
     <vw-input value="你好"></vw-input>
     <vw-input value="Yee" disabled></vw-input>
-    <vw-input value="yyh" readonly></vw-input>
+    <vw-input :value="message" readonly></vw-input>
     <vw-input value="用户名" error="用户名不能少于2个字符"></vw-input>
+    <vw-input v-model="message"></vw-input>
+    <span>{{message}}</span>
   </div>
   <div id="test"></div>
 </div>

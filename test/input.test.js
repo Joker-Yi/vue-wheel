@@ -76,10 +76,16 @@ describe('Input', () => {
             vm.$on(eventName, callback)
             //new 一个相应的事件对象
             let event = new Event(eventName);
+            // 给event 添加target 属性及值，直接event.target = 'hi' 会报错（只读属性）
+            Object.defineProperty(
+                event, 'target', {
+                  value: {value: 'hi'}, enumerable: true
+                }
+            )
             let inputElement = vm.$el.querySelector('input')
             inputElement.dispatchEvent(event)
-            // 测试时间事件回调函数是否被触发 且第一个参数 为event
-            expect(callback).to.have.been.calledWith(event)
+            // 测试时间事件回调函数是否被触发 且第一个参数 为event.target.value
+            expect(callback).to.have.been.calledWith('hi')
           })
     })
   })
