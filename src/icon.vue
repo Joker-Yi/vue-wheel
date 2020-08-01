@@ -7,6 +7,7 @@
 <script>
   import './iconfont'
 export default {
+  name: 'vw-icon',
 	props: ['name']
 }
 </script>

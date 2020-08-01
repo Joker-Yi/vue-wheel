@@ -13,7 +13,7 @@
 <script>
   import Icon from "./icon";
 export default {
-	name: '',
+	name: 'vw-button',
   components: {
     'vw-icon': Icon
   },
