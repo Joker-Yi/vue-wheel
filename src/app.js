@@ -6,12 +6,16 @@ import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
 import Input from './input'
+import Row from './row'
+import Col from './col'
 
 // 注册一个全局的组件Button
 Vue.component('vw-button',Button)
 Vue.component('vw-icon',Icon)
 Vue.component('vw-button-group',ButtonGroup)
 Vue.component('vw-input',Input)
+Vue.component('vw-row',Row)
+Vue.component('vw-col',Col)
 
 new Vue({
   el: '#app',
