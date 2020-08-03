@@ -1,6 +1,7 @@
 # 造轮子系列 - 一个适用vue的ui组件库
 
 [![Build Status](https://www.travis-ci.org/Joker-Yi/vue-wheel.svg?branch=master)](https://www.travis-ci.org/Joker-Yi/vue-wheel)
+![npm](https://img.shields.io/npm/dw/yee-wheel-ui)
 
 作者: Yee
 ## 介绍
