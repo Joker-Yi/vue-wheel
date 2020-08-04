@@ -5,6 +5,7 @@
 ![npm](https://img.shields.io/npm/dw/yee-wheel-ui)
 ![npm bundle size (version)](https://img.shields.io/bundlephobia/min/yee-wheel-ui/0.0.3)
 ![GitHub](https://img.shields.io/github/license/Joker-Yi/vue-wheel)
+
 作者: Yee
 ## 介绍
 
