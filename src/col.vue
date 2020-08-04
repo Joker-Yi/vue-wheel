@@ -50,14 +50,33 @@
       },
       colClass() {
         let {span, offset, phone, ipad, narrowPc, pc, widePc} = this
+        //  str 中缀
+        let createClasses = (obj, str = '') => {
+          if (!obj){
+              return []
+          }
+          let arr = []
+          if (obj.span){
+            arr.push(`col-${str}${obj.span}`)
+          }
+          if (obj.offset){
+            arr.push(`offset-${str}${obj.offset}`)
+          }
+          return arr
+        }
         return [
-          span && `col-${span}`,
-          offset && `offset-${offset}`,
+          // span && `col-${span}`,
+          // offset && `offset-${offset}`,
           // ... (phone && [`col-phone-${phone.span}`]),
-          ... (ipad ? [`col-ipad-${ipad.span}`] : []),
-          ... (narrowPc ? [`col-narrow-pc-${narrowPc.span}`] : []),
-          ... (pc ? [`col-pc-${pc.span}`] : []),
-          ... (widePc ? [`col-wide-pc-${widePc.span}`] : []),
+          // ... (ipad ? [`col-ipad-${ipad.span}`] : []),
+          // ... (narrowPc ? [`col-narrow-pc-${narrowPc.span}`] : []),
+          // ... (pc ? [`col-pc-${pc.span}`] : []),
+          // ... (widePc ? [`col-wide-pc-${widePc.span}`] : []),
+          ...createClasses({span, offset}),
+          ...createClasses(ipad, 'ipad-'),
+          ...createClasses(narrowPc, 'narrow-pc-'),
+          ...createClasses(pc, 'pc-'),
+          ...createClasses(widePc, 'wide-pc-'),
         ]
       }
     }
