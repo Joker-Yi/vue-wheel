@@ -8,6 +8,11 @@ import ButtonGroup from './button-group'
 import Input from './input'
 import Row from './row'
 import Col from './col'
+import Layout from './layout'
+import Footer from './footer'
+import Content from './content'
+import Header from './header'
+import Sider from './sider'
 
 // 注册一个全局的组件Button
 Vue.component('vw-button',Button)
@@ -16,6 +21,11 @@ Vue.component('vw-button-group',ButtonGroup)
 Vue.component('vw-input',Input)
 Vue.component('vw-row',Row)
 Vue.component('vw-col',Col)
+Vue.component('vw-layout',Layout)
+Vue.component('vw-footer',Footer)
+Vue.component('vw-content',Content)
+Vue.component('vw-header',Header)
+Vue.component('vw-sider',Sider)
 
 new Vue({
   el: '#app',
@@ -42,7 +52,6 @@ chai.use(spies)
     }
   })
   button.$mount('#test')
-  console.log(button.$el);
   let href = button.$el.querySelector('use')
   // 测试 引入图标
   expect(href.getAttribute('xlink:href')).to.eq('#i-shezhi') // 单元测试没在控制台报错代表测试用例通过   判断 主观输入  是否 = 实际输出

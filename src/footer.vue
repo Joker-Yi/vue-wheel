@@ -2,7 +2,9 @@
  * Create by Yee on 2020/8/5 2:23
  -->
 <template>
-  <div class="footer"></div>
+  <div class="footer">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
