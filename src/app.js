@@ -13,6 +13,11 @@ import Footer from './footer'
 import Content from './content'
 import Header from './header'
 import Sider from './sider'
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsBody from './tabs-body'
+import TabsItem from './tabs-item'
+import TabsPane from './tabs-pane'
 
 // 注册一个全局的组件Button
 Vue.component('vw-button',Button)
@@ -26,6 +31,11 @@ Vue.component('vw-footer',Footer)
 Vue.component('vw-content',Content)
 Vue.component('vw-header',Header)
 Vue.component('vw-sider',Sider)
+Vue.component('vw-tabs',Tabs)
+Vue.component('vw-tabs-head',TabsHead)
+Vue.component('vw-tabs-body',TabsBody)
+Vue.component('vw-tabs-item',TabsItem)
+Vue.component('vw-tabs-pane',TabsPane)
 
 new Vue({
   el: '#app',
@@ -33,7 +43,8 @@ new Vue({
     loading1: false,
     loading2: true,
     loading3: false,
-    message: ''
+    message: '',
+    selectedTab: 'sports'
   }
 })
 

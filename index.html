@@ -156,6 +156,36 @@
       <vw-footer>footer</vw-footer>
     </vw-layout>
   </vw-layout>
+  <hr>
+  <vw-tabs :selected.sync="selectedTab">
+<!--    完全等价上面写法-->
+<!--  <vw-tabs :selected="selectedTab" @update:selected="selectedTab = $event">-->
+    <vw-tabs-head>
+      <template slot="actions">
+        <button>设置</button>
+      </template>
+      <vw-tabs-item name="woman">
+        <vw-icon name="shezhi"></vw-icon>美女
+      </vw-tabs-item>
+      <vw-tabs-item name="finance" disabled>
+        财经
+      </vw-tabs-item>
+      <vw-tabs-item name="sports">
+        体育
+      </vw-tabs-item>
+    </vw-tabs-head>
+    <vw-tabs-body>
+      <vw-tabs-pane name="woman">
+        美女相关资讯
+      </vw-tabs-pane>
+      <vw-tabs-pane name="finance">
+        财经相关资讯
+      </vw-tabs-pane>
+      <vw-tabs-pane name="sports">
+        体育相关资讯
+      </vw-tabs-pane>
+    </vw-tabs-body>
+  </vw-tabs>
 </div>
 
 <script src='./src/app.js'></script>
