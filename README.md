@@ -14,7 +14,7 @@
 ## 开始使用
 1. 安装
 
-   使用本框架前,请在css中开启 box-sizing: border-box;
+   使用本框架前,请在css中开启 box-sizing: border-box ;
 ```
 npm i yee-wheel-ui
 ```
