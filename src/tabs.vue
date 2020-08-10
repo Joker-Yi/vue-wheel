@@ -36,8 +36,15 @@
       }
     },
     mounted () {
-      // this.$emit('update:selected', '这是 this $emit 出来的数据')
-      this.eventBus.$emit('update:selected', this.selected)
+      this.$children.forEach((vm) => {
+        if (vm.$options.name === 'vw-tabs-head') {
+          vm.$children.forEach((childVm) => { // 找到是哪个tabs-item 触发的事件，传递给所有后代
+            if (childVm.$options.name === 'vw-tabs-item' && childVm.name === this.selected) {
+              this.eventBus.$emit('update:selected', this.selected, childVm)
+            }
+          })
+        }
+      })
     }
   }
 </script>

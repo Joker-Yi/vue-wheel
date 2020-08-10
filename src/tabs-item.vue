@@ -40,7 +40,7 @@
     },
     methods: {
       hanldClick() {
-        this.eventBus.$emit('update:selected', this.name)
+        this.eventBus.$emit('update:selected', this.name, this)
       }
     }
   }
@@ -55,7 +55,7 @@
     display: flex;
     align-items: center;
     &.active {
-      background: red;
+      color: red;
     }
   }
 </style>
