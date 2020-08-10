@@ -9,7 +9,8 @@
 
 <script>
   export default {
-    name: "vw-tabs-body"
+    name: "vw-tabs-body",
+    inject: ['eventBus'],
   }
 </script>
 
