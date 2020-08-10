@@ -20,7 +20,7 @@
         let {width, height, top, left} = vm.$el.getBoundingClientRect()
         console.log(width, height, top, left);
         this.$refs['line'].style.width = `${width}px`
-        this.$refs['line'].style.transform = `translateX(${left}px)`
+        this.$refs['line'].style.left = `${left}px`
       })
     }
   }
@@ -29,12 +29,13 @@
 <style scoped lang="scss">
   $tab-height: 40px;
   $blue: blue;
+  $border-color: #ddd;
   .tabs-head {
     display: flex;
     height: $tab-height;
     justify-content: flex-start;
-    border: 1px solid red;
     position: relative;
+    border-bottom: 1px solid $border-color;
     > .line {
       position: absolute;
       bottom: 0;
@@ -43,6 +44,9 @@
     }
     > .actions-wrapper {
       margin-left: auto;
+      display: flex;
+      align-items: center;
+      padding: 0 1em;
     }
   }
 </style>
