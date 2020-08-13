@@ -2,7 +2,7 @@
  * Create by Yee on 2020/8/5 22:29
  -->
 <template>
-  <div class="tabs-item" @click="hanldClick" :class="classes">
+  <div class="tabs-item" @click="hanldClick" :class="classes" :data-name="name">
     <slot></slot>
   </div>
 </template>
@@ -35,14 +35,17 @@
       }
     },
     created () {
-      this.eventBus.$on('update:selected', (name) => {
-        this.active = name === this.name;
-      })
+      if (this.eventBus) {
+        this.eventBus.$on('update:selected', (name) => {
+          this.active = name === this.name;
+        })
+      }
     },
     methods: {
       hanldClick() {
         if (this.disabled) { return }
-        this.eventBus.$emit('update:selected', this.name, this)
+        this.eventBus && this.eventBus.$emit('update:selected', this.name, this)
+        this.$emit('click', this)
       }
     }
   }
