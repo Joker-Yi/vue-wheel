@@ -61,7 +61,6 @@ new Vue({
             }
           },
           autoClose: false,
-          autoCloseDelay: 3
     })
   },
   methods: {
@@ -75,7 +74,7 @@ new Vue({
       this.showToast('bottom')
     },
     showToast(position){
-      this.$toast('我是 message',{position})
+      this.$toast('我是 message',{position,autoClose: 3})
     }
   }
 })

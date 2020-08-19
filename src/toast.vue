@@ -20,13 +20,13 @@
   export default {
     name: "VwToast",
     props: {
+      // 简化toast传参，删除autoCloseDelay，合入autoClose中，现可接受数字和布尔型，数字为延迟关闭的时间
       autoClose: {
-        type: Boolean,
-        default: true
-      },
-      autoCloseDelay: {
-        type: Number,
-        default: 5
+        type: [Boolean, Number],
+        default: 5,
+        validator (value) {
+          return value === false || typeof value === 'number';
+        }
       },
       closeButton: {
         type: Object,
@@ -72,7 +72,7 @@
         if (this.autoClose) {
           setTimeout(() => {
             this.close()
-          }, this.autoCloseDelay * 1000)
+          }, this.autoClose * 1000)
         }
       },
       close () {
