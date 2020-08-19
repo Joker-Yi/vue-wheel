@@ -5,7 +5,7 @@
 // import 'element-ui/lib/theme-chalk/index.css'
 // import VueECharts from 'vue-echarts' //注册图表
 
-import './public/css/index.css' //组件css文件
+// import './public/css/index.css' //组件css文件
 
 // export default ({
 //                   Vue, // VuePress 正在使用的 Vue 构造函数
