@@ -4,7 +4,7 @@
 					@click="$emit('click')">
 		<vw-icon class="icon" v-if="icon && !loading" :name="icon"></vw-icon>
 		<vw-icon class="loading icon" v-if="loading" name="loading"></vw-icon>
-		<div class="content">
+		<div class="vw-button-content">
 			<slot></slot>
 		</div>
 	</button>
@@ -38,27 +38,36 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  $font-size: 14px;
+  $button-height: 32px;
+  $button-bg: white;
+  $button-active-bg: #eee;
+  $border-radius: 4px;
+  $color: #333;
+  $border-color: #999;
+  $border-color-hover: #666;
+
 	@keyframes spin {
 		0% {transform: rotate(0deg);}
 		100% {transform: rotate(360deg);}
 	}
 	.vw-button {
-		font-size: var(--font-size);
-		height: var(--button-height);
-		padding: 0 1em;
-		border-radius: var(--border-radius);
-		border: 1px solid var(--border-color);
-		background: var(--button-bg);
+    font-size: $font-size;
+    height: $button-height;
+    padding: 0 1em;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    background: $button-bg;
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
 		vertical-align: middle;
 		&:hover {
-			border-color: var(--border-color-hover);
-			cursor: pointer;
+      border-color: $border-color-hover;
+      cursor: pointer;
 		}
 		&:active {
-			background-color: var(--button-active-bg);
+      background-color: $button-active-bg;
 		}
 		&:focus {
 			outline: none;
@@ -68,7 +77,7 @@ export default {
 			margin-right: 0.1em;
 			margin-left: 0;
 		}
-		> .content {
+		> .vw-button-content {
 			order: 2;
 		}
 
@@ -78,7 +87,7 @@ export default {
 				margin-right: 0;
 				margin-left: 0.1em;
 			}
-			> .content {
+			> .vw-button-content {
 				order: 1;
 			}
 		}
