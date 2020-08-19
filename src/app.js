@@ -18,6 +18,8 @@ import TabsHead from './tabs-head'
 import TabsBody from './tabs-body'
 import TabsItem from './tabs-item'
 import TabsPane from './tabs-pane'
+import Toast from './toast'
+import plugin from "./plugin";
 
 // 注册一个全局的组件Button
 Vue.component('vw-button',Button)
@@ -36,6 +38,8 @@ Vue.component('vw-tabs-head',TabsHead)
 Vue.component('vw-tabs-body',TabsBody)
 Vue.component('vw-tabs-item',TabsItem)
 Vue.component('vw-tabs-pane',TabsPane)
+Vue.component('vw-toast',Toast)
+Vue.use(plugin)
 
 new Vue({
   el: '#app',
@@ -45,8 +49,16 @@ new Vue({
     loading3: false,
     message: '',
     selectedTab: 'sports'
+  },
+  methods: {
+    showToast(){
+      this.$toast('我是 message')
+    }
   }
 })
+
+
+
 
 import chai from 'chai'
 const expect = chai.expect
