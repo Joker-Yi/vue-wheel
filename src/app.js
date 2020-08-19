@@ -50,6 +50,11 @@ new Vue({
     message: '',
     selectedTab: 'sports'
   },
+  created(){
+    this.$toast(` <p>文字</p> 第二行` , {
+      enableHtml: true
+    })
+  },
   methods: {
     showToast(){
       this.$toast('我是 message')
