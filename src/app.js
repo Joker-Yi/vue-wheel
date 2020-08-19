@@ -54,6 +54,18 @@ new Vue({
     this.$toast(` <p>文字</p> 第二行` , {
       enableHtml: true
     })
+    this.$toast('我的UI框架棒不棒？', {
+          position: 'middle',
+          enableHtml: false,
+          closeButton: {
+            text: '棒',
+            callback () {
+              console.log('用户觉得你的ui框架很棒!')
+            }
+          },
+          autoClose: false,
+          autoCloseDelay: 3
+    })
   },
   methods: {
     showToast(){
