@@ -51,9 +51,6 @@ new Vue({
     selectedTab: 'sports'
   },
   created(){
-    this.$toast(` <p>文字</p> 第二行` , {
-      enableHtml: true
-    })
     this.$toast('我的UI框架棒不棒？', {
           position: 'middle',
           enableHtml: false,
