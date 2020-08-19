@@ -65,8 +65,17 @@ new Vue({
     })
   },
   methods: {
-    showToast(){
-      this.$toast('我是 message')
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
+    },
+    showToast(position){
+      this.$toast('我是 message',{position})
     }
   }
 })
