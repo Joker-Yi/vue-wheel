@@ -187,6 +187,19 @@
   <button @click="showToast1">top</button>
   <button @click="showToast2">middle</button>
   <button @click="showToast3">bottom</button>
+  <hr>
+  <vw-popover>
+    <template slot="content">
+      <div>popover内容</div>
+    </template>
+    <button>点我</button>
+  </vw-popover>
+  <vw-popover>
+    <template slot="content">
+      <div>popover内容</div>
+    </template>
+    <button>点我</button>
+  </vw-popover>
 </div>
 
 <script src='./src/app.js'></script>

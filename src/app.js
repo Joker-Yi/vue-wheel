@@ -20,6 +20,7 @@ import TabsItem from './tabs-item'
 import TabsPane from './tabs-pane'
 import Toast from './toast'
 import plugin from "./plugin";
+import Popover from './popover'
 
 // 注册一个全局的组件Button
 Vue.component('vw-button',Button)
@@ -39,6 +40,9 @@ Vue.component('vw-tabs-body',TabsBody)
 Vue.component('vw-tabs-item',TabsItem)
 Vue.component('vw-tabs-pane',TabsPane)
 Vue.component('vw-toast',Toast)
+Vue.component('vw-popover', Popover)
+
+
 Vue.use(plugin)
 
 new Vue({
