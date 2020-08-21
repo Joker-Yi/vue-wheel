@@ -2,7 +2,7 @@
  * Create by Yee on 2020/8/21 10:45
  -->
 <template>
-  <div class="popover" @click="handleClick">
+  <div class="popover" @click.stop="handleClick">
     <div class="content-wrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
@@ -14,11 +14,25 @@
   export default {
     name: "vw-popover",
     data () {
-      return {visible: false}
+      return {
+        visible: false
+      }
     },
     methods: {
       handleClick () {
         this.visible = !this.visible
+        if (this.visible === true) { // 如果显示content，为document添加监听click事件，可点击document隐藏content
+          this.$nextTick(() => {
+            let eventHandler = () => {
+              this.visible = false
+              console.log('document 隐藏 popover')
+              document.removeEventListener('click', eventHandler)
+            }
+            document.addEventListener('click', eventHandler)
+          })
+        }else{
+          console.log('vm 隐藏 popover')
+        }
       }
     }
   }
