@@ -35,6 +35,7 @@
         eventBus: this.eventBus
       }
     },
+
     mounted () {
       if (this.$children.length === 0) {
         console && console.warn &&
