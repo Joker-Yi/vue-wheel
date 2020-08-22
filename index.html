@@ -189,13 +189,25 @@
   <button @click="showToast3">bottom</button>
   <hr>
   <div style="border: 1px solid red;overflow: hidden">
-    <vw-popover>
+    <vw-popover position="top">
       <template slot="content">
         <div>popover内容</div>
       </template>
       <button>点我</button>
     </vw-popover>
-    <vw-popover>
+    <vw-popover position="right">
+      <template slot="content">
+        <div>popover内容</div>
+      </template>
+      <button>点我</button>
+    </vw-popover>
+    <vw-popover position="bottom">
+      <template slot="content">
+        <div>popover内容</div>
+      </template>
+      <button>点我</button>
+    </vw-popover>
+    <vw-popover position="left">
       <template slot="content">
         <div>popover内容</div>
       </template>
