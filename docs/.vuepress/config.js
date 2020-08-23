@@ -32,11 +32,12 @@ module.exports = {
       {
         title: '组件',
         children: [
-            '/components/button',
-            '/components/icon',
-            '/components/buttonGroup',
-            '/components/buttonGroup',
-
+          '/components/icon',
+          '/components/button',
+          '/components/buttonGroup',
+          '/components/input',
+          '/components/layout',
+          '/components/container',
         ]
       },
 
