@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[29],{411:function(t,e,n){"use strict";n.r(e);var s={name:"vw-footer"},a=n(26),o=Object(a.a)(s,(function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"footer"},[this._t("default")],2)}),[],!1,null,"0718f5f0",null);e.default=o.exports}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[32],{417:function(t,e,s){"use strict";s.r(e);var n={name:"vw-tabs-body",inject:["eventBus"]},a=s(26),i=Object(a.a)(n,(function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"tabs-body"},[this._t("default")],2)}),[],!1,null,"319fa548",null);e.default=i.exports}}]);
