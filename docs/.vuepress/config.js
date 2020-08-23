@@ -38,6 +38,9 @@ module.exports = {
           '/components/button',
           '/components/buttonGroup',
           '/components/input',
+          '/components/tabs',
+          '/components/toast',
+          '/components/popover',
 
         ]
       },

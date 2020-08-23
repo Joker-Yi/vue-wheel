@@ -110,6 +110,7 @@
   /*为三种不同位置添加进入动画*/
   .wrapper {
     position: fixed;
+    z-index: 999;
     left: 50%;
     transform: translateX(-50%);
     $animation-duration: 300ms;

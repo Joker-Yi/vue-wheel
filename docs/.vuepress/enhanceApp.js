@@ -29,6 +29,9 @@ export default ({
                   siteData // 站点元数据
                 }) => {
   // ...做一些其他的应用级别的优化
+  Vue.use(plugin)
+
+
   Vue.component('vw-button',Button)
   Vue.component('vw-icon',Icon)
   Vue.component('vw-button-group',ButtonGroup)
@@ -48,5 +51,4 @@ export default ({
   Vue.component('vw-toast',Toast)
   Vue.component('vw-popover', Popover)
 
-  Vue.use(plugin)
 }
