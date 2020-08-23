@@ -24,12 +24,6 @@ sidebarDepth: 2
       <vw-col span="6"><div class="temp">content</div></vw-col>
       <vw-col span="6"><div class="temp">content</div></vw-col>
     </vw-row>
-    <vw-row>
-      <vw-col span="2"><div class="temp">content</div></vw-col>
-      <vw-col span="2"><div class="temp">content</div></vw-col>
-      <vw-col span="2"><div class="temp">content</div></vw-col>
-      <vw-col span="18"><div class="temp">content</div></vw-col>
-    </vw-row>
   </div>
 </template>
 <script>
