@@ -20,4 +20,4 @@ npm i yee-wheel-ui
    
 ## 文档
    使用本框架前,请在css中开启 box-sizing: border-box ;
-
+   文档地址：https://joker-yi.github.io/vue-wheel/
