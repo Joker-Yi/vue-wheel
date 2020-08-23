@@ -47,7 +47,9 @@
     "sinon": "^9.0.1",
     "sinon-chai": "^3.5.0",
     "vue-template-compiler": "^2.6.11",
-    "vuepress": "^1.5.3"
+    "vuepress": "^1.5.3",
+    "vuepress-plugin-demo-block": "^0.7.2",
+    "vuepress-plugin-demo-container": "^0.2.0"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"

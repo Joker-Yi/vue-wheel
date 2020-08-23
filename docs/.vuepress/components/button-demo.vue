@@ -29,11 +29,6 @@
       `
       }
     },
-    mounted () {
-      // import('../../../src/button').then(module => {
-      //   this.dynamicComponent = module.default
-      // })
-    }
   }
 </script>
 
