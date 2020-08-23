@@ -202,8 +202,9 @@
       <button>点我</button>
     </vw-popover>
     <vw-popover position="bottom">
-      <template slot="content">
+      <template slot="content" slot-scope="{close}">
         <div>popover内容</div>
+        <div @click="close">关闭</div>
       </template>
       <button>点我</button>
     </vw-popover>
