@@ -15,3 +15,20 @@ npm i yee-wheel-ui -S
 ```shell script
 yarn add yee-wheel-ui -S
 ```
+
+## 从一个小例子开始
+```vue
+<template>
+  <div>
+    <vw-button>Hello</vw-button>
+  </div>
+</template>
+<script>
+  import Button from 'yee-wheel-ui'
+  export default {
+    components: {
+      'VwButton': button,
+    },
+  }
+</script>
+```

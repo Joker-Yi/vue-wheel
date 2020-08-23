@@ -27,7 +27,7 @@ sidebarDepth: 2
         <vw-layout>
           <vw-header class="header">header</vw-header>
           <vw-content class="content">content</vw-content>
-          <vw-footer class="footer">footer</vw-footer>
+          <vw-footer class="footers">footer</vw-footer>
         </vw-layout>
       </vw-layout>
 
@@ -45,7 +45,7 @@ sidebarDepth: 2
           <vw-sider class="sider">sider</vw-sider>
           <vw-content class="content">content</vw-content>
         </vw-layout>
-        <vw-footer class="footer">footer</vw-footer>
+        <vw-footer class="footers">footer</vw-footer>
       </vw-layout>
 
       <vw-layout>
@@ -61,7 +61,7 @@ sidebarDepth: 2
         <vw-layout>
           <vw-content class="content">content</vw-content>
         </vw-layout>
-        <vw-footer class="footer">footer</vw-footer>
+        <vw-footer class="footers">footer</vw-footer>
       </vw-layout>
 
       <vw-layout>
@@ -77,7 +77,7 @@ export default {
 }
 </script>
 <style>
-  .header,.footer {
+  .header,.footers {
     height: 50px;
     background:#555;
   }
