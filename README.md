@@ -20,4 +20,5 @@ npm i yee-wheel-ui
    
 ## 文档
    使用本框架前,请在css中开启 box-sizing: border-box ;
-   文档地址：https://joker-yi.github.io/vue-wheel/
+   
+   文档地址：https://joker-yi.github.io/vue-wheel/ (进不去请修改下本地hosts文件，加上`185.199.108.153  joker-yi.github.io`)
